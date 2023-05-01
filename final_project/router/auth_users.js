@@ -72,7 +72,7 @@ regd_users.delete("/auth/review/delete/:isbn", (req, res) => {
     return Promise.reject({ message: "Invalid ISBN" });
   } else {
     delete books[isbn].reviews[req.username];
-    res.send("Review has been deleted for isbn " + isbn);
+    res.send("Review has been deleted for isbn" + isbn);
     return Promise.resolve();
   }
 });
